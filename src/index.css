@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  font-family: 'Poppins', sans-serif;
+
+  background: #000;
+  color: white;
+}
+
+body {
+  touch-action: manipulation;
+}
+
+/* =========================
+   ENTRY SCREEN
+========================= */
+
+.entry-screen {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(circle at top, #171717 0%, #000 65%);
+}
+
+.overlay {
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  background: #7b2cff;
+
+  filter: blur(130px);
+
+  opacity: 0.45;
+
+  animation: floatGlow 6s ease-in-out infinite;
+}
+
+@keyframes floatGlow {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  padding: 20px;
+}
+
+.title {
+  font-size: 46px;
+  font-weight: 800;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 14px;
+
+  color: white;
+
+  text-shadow:
+    0 0 20px rgba(123, 44, 255, 0.8),
+    0 0 40px rgba(0, 212, 255, 0.2);
+}
+
+.subtitle {
+  font-size: 15px;
+
+  color: #cfcfcf;
+
+  margin-bottom: 38px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.enter-btn {
+  padding: 15px 38px;
+
+  border-radius: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px);
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 0 20px rgba(123, 44, 255, 0.15),
+    inset 0 0 12px rgba(255, 255, 255, 0.04);
+}
+
+.enter-btn:hover {
+  transform: translateY(-2px);
+
+  background: rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 0 25px rgba(0, 212, 255, 0.18),
+    0 0 40px rgba(123, 44, 255, 0.12);
+}
+
+.enter-btn:active {
+  transform: scale(0.97);
+}
+
+/* =========================
+   BOOT SCREEN
+========================= */
+
+.boot-screen {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background: #000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.boot-glow {
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  background: #00d4ff;
+
+  filter: blur(140px);
+
+  opacity: 0.18;
+}
+
+.scanner-ring {
+  width: 170px;
+  height: 170px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.scanner-ring::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -3px;
+
+  border-radius: 50%;
+
+  border-top: 3px solid #00d4ff;
+  border-right: 3px solid #7b2cff;
+
+  animation: rotateRing 3s linear infinite;
+}
+
+.scanner-inner {
+  width: 130px;
+  height: 130px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  color: white;
+
+  box-shadow:
+    inset 0 0 18px rgba(255, 255, 255, 0.04),
+    0 0 20px rgba(0, 212, 255, 0.08);
+}
+
+.boot-text {
+  margin-top: 34px;
+
+  font-size: 15px;
+
+  letter-spacing: 2px;
+
+  color: #d4d4d4;
+
+  text-transform: uppercase;
+
+  animation: fade 0.5s ease;
+}
+
+@keyframes rotateRing {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade {
+
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   REVEAL SCREEN
+========================= */
+
+.reveal-screen {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  padding: 20px;
+
+  background:
+    radial-gradient(circle at top, #111 0%, #000 70%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reveal-glow {
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  filter: blur(140px);
+
+  opacity: 0.30;
+}
+
+.purple {
+  background: #7b2cff;
+
+  top: 10%;
+  left: -10%;
+}
+
+.cyan {
+  background: #00d4ff;
+
+  bottom: 10%;
+  right: -10%;
+}
+
+.reveal-card {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 420px;
+
+  padding: 42px 30px;
+
+  border-radius: 34px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.10),
+      rgba(255, 255, 255, 0.03)
+    );
+
+  backdrop-filter: blur(24px);
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  animation:
+    cardFade 1.4s cubic-bezier(0.22, 1, 0.36, 1),
+    floatCard 5s ease-in-out infinite 1.4s;
+
+  box-shadow:
+    0 0 30px rgba(123, 44, 255, 0.18),
+    0 0 80px rgba(0, 212, 255, 0.08),
+    inset 0 0 20px rgba(255, 255, 255, 0.03);
+}
+
+.reveal-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -60%;
+
+  width: 220px;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.10),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  animation: shine 5s infinite;
+}
+
+.small-text {
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  color: #bdbdbd;
+
+  margin-bottom: 20px;
+}
+
+.thank-title {
+  font-size: 46px;
+
+  font-weight: 800;
+
+  margin-bottom: 22px;
+
+  letter-spacing: 1px;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #00d4ff
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+.message {
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: #ececec;
+
+  margin-bottom: 30px;
+
+  font-weight: 300;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  margin-bottom: 20px;
+}
+
+.footer-text {
+  font-size: 13px;
+
+  color: #9c9c9c;
+
+  letter-spacing: 1px;
+}
+
+@keyframes glowPulse {
+
+  0% {
+    filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.2));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 18px rgba(0, 212, 255, 0.6));
+  }
+
+  100% {
+    filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.2));
+  }
+}
+
+@keyframes shine {
+
+  0% {
+    left: -60%;
+  }
+
+  100% {
+    left: 140%;
+  }
+}
+
+@keyframes cardFade {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(40px)
+      scale(0.94);
+
+    filter: blur(12px);
+  }
+
+  60% {
+    opacity: 1;
+
+    transform:
+      translateY(-4px)
+      scale(1.01);
+
+    filter: blur(0px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0px)
+      scale(1);
+
+    filter: blur(0px);
+  }
+}
+
+@keyframes floatCard {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* =========================
+   PARTICLES
+========================= */
+
+#tsparticles {
+  position: absolute !important;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .title {
+    font-size: 34px;
+
+    letter-spacing: 2px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .enter-btn {
+    width: 100%;
+    max-width: 260px;
+
+    font-size: 14px;
+  }
+
+  .scanner-ring {
+    width: 150px;
+    height: 150px;
+  }
+
+  .scanner-inner {
+    width: 115px;
+    height: 115px;
+
+    font-size: 24px;
+  }
+
+  .boot-text {
+    font-size: 13px;
+
+    text-align: center;
+
+    padding: 0 20px;
+  }
+
+  .reveal-card {
+    padding: 34px 24px;
+
+    border-radius: 28px;
+  }
+
+  .thank-title {
+    font-size: 36px;
+  }
+
+  .message {
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+  .small-text {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+  }
+}
