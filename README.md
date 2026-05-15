@@ -1,16 +1,63 @@
-# React + Vite
+# 🎉 Harsh AI Birthday Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A futuristic birthday reply experience built using React + Vite.
 
-Currently, two official plugins are available:
+Instead of sending a normal “thank you” message, this project creates a cinematic AI-style portal with animations, particles, scanner effects, music, and a premium glassmorphism UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🚀 Futuristic entry screen
+- 💫 Animated particles background
+- 🔮 Glassmorphism UI
+- 🎵 Background music
+- 🎊 Confetti celebration effect
+- 🧠 AI-style boot/loading screen
+- 📱 Fully mobile responsive
+- 🌌 Premium animated reveal card
+- ⚡ Smooth cinematic animations
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- React
+- Vite
+- CSS3
+- react-tsparticles
+- react-confetti
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/harsheditz79/Harsh-portal.git
+
+Go inside the project folder:
+cd Harsh-portal
+
+Install dependencies:
+npm install
+
+Start development server:
+npm run dev
+
+🚀 Build
+npm run build
+
+🌍 Live Demo
+https://harsh-portal.vercel.app
+
+**📸 Screens
+Entry Screen
+AI Boot Screen
+Reveal Card
+Particle Effects
+Confetti Celebration
+👨‍💻 Author
+
+Made with ❤️ by Harsh**
