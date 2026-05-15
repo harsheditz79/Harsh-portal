@@ -1,274 +1,267 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 html,
 body,
-#root {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+#root{
+  width:100%;
+  height:100%;
+  overflow:hidden;
 
-  font-family: 'Poppins', sans-serif;
+  font-family:'Poppins',sans-serif;
 
-  background: #000;
-  color: white;
+  background:#000;
+  color:white;
 }
 
-body {
-  touch-action: manipulation;
+body{
+  touch-action:manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* =========================
    ENTRY SCREEN
 ========================= */
 
-.entry-screen {
-  position: relative;
+.entry-screen{
+  position:relative;
 
-  width: 100%;
-  height: 100vh;
+  width:100%;
+  height:100vh;
 
-  overflow: hidden;
+  overflow:hidden;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 
   background:
-    radial-gradient(circle at top, #171717 0%, #000 65%);
+  radial-gradient(circle at top,#161616 0%,#000 68%);
 }
 
-.overlay {
-  position: absolute;
+.overlay{
+  position:absolute;
 
-  width: 320px;
-  height: 320px;
+  width:280px;
+  height:280px;
 
-  background: #7b2cff;
+  background:#7b2cff;
 
-  filter: blur(130px);
+  filter:blur(100px);
 
-  opacity: 0.45;
+  opacity:0.35;
 
-  animation: floatGlow 6s ease-in-out infinite;
+  animation:floatGlow 7s ease-in-out infinite;
 }
 
-@keyframes floatGlow {
+@keyframes floatGlow{
 
-  0% {
-    transform: translateY(0px);
+  0%{
+    transform:translateY(0px);
   }
 
-  50% {
-    transform: translateY(-20px);
+  50%{
+    transform:translateY(-16px);
   }
 
-  100% {
-    transform: translateY(0px);
+  100%{
+    transform:translateY(0px);
   }
 }
 
-.content {
-  position: relative;
-  z-index: 2;
+.content{
+  position:relative;
+  z-index:2;
 
-  text-align: center;
+  text-align:center;
 
-  padding: 20px;
+  padding:20px;
 }
 
-.title {
-  font-size: 46px;
-  font-weight: 800;
+.title{
+  font-size:46px;
+  font-weight:800;
 
-  letter-spacing: 4px;
+  letter-spacing:4px;
 
-  margin-bottom: 14px;
+  margin-bottom:14px;
 
-  color: white;
+  color:white;
 
   text-shadow:
-    0 0 20px rgba(123, 44, 255, 0.8),
-    0 0 40px rgba(0, 212, 255, 0.2);
+  0 0 18px rgba(123,44,255,0.55),
+  0 0 35px rgba(0,212,255,0.10);
 }
 
-.subtitle {
-  font-size: 15px;
+.subtitle{
+  font-size:14px;
 
-  color: #cfcfcf;
+  color:#cfcfcf;
 
-  margin-bottom: 38px;
+  margin-bottom:36px;
 
-  letter-spacing: 2px;
+  letter-spacing:2px;
 
-  text-transform: uppercase;
+  text-transform:uppercase;
 }
 
-.enter-btn {
-  padding: 15px 38px;
+.enter-btn{
+  padding:15px 38px;
 
-  border-radius: 50px;
+  border-radius:50px;
 
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border:1px solid rgba(255,255,255,0.10);
 
-  background: rgba(255, 255, 255, 0.08);
+  background:rgba(255,255,255,0.07);
 
-  backdrop-filter: blur(14px);
+  backdrop-filter:blur(10px);
 
-  color: white;
+  color:white;
 
-  font-size: 15px;
-  font-weight: 600;
+  font-size:15px;
+  font-weight:600;
 
-  letter-spacing: 1px;
+  letter-spacing:1px;
 
-  cursor: pointer;
+  cursor:pointer;
 
-  transition: all 0.3s ease;
+  transition:0.3s ease;
 
   box-shadow:
-    0 0 20px rgba(123, 44, 255, 0.15),
-    inset 0 0 12px rgba(255, 255, 255, 0.04);
+  0 0 16px rgba(123,44,255,0.12),
+  inset 0 0 10px rgba(255,255,255,0.03);
 }
 
-.enter-btn:hover {
-  transform: translateY(-2px);
+.enter-btn:hover{
+  transform:translateY(-2px);
 
-  background: rgba(255, 255, 255, 0.12);
-
-  box-shadow:
-    0 0 25px rgba(0, 212, 255, 0.18),
-    0 0 40px rgba(123, 44, 255, 0.12);
+  background:rgba(255,255,255,0.10);
 }
 
-.enter-btn:active {
-  transform: scale(0.97);
+.enter-btn:active{
+  transform:scale(0.97);
 }
 
 /* =========================
    BOOT SCREEN
 ========================= */
 
-.boot-screen {
-  position: relative;
+.boot-screen{
+  position:relative;
 
-  width: 100%;
-  height: 100vh;
+  width:100%;
+  height:100vh;
 
-  overflow: hidden;
+  overflow:hidden;
 
-  background: #000;
+  background:#000;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
 }
 
-.boot-glow {
-  position: absolute;
+.boot-glow{
+  position:absolute;
 
-  width: 350px;
-  height: 350px;
+  width:260px;
+  height:260px;
 
-  background: #00d4ff;
+  background:#00d4ff;
 
-  filter: blur(140px);
+  filter:blur(90px);
 
-  opacity: 0.18;
+  opacity:0.12;
 }
 
-.scanner-ring {
-  width: 170px;
-  height: 170px;
+.scanner-ring{
+  width:160px;
+  height:160px;
 
-  border-radius: 50%;
+  border-radius:50%;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 
-  position: relative;
+  position:relative;
 
-  z-index: 2;
+  z-index:2;
 }
 
-.scanner-ring::before {
-  content: "";
+.scanner-ring::before{
+  content:"";
 
-  position: absolute;
+  position:absolute;
 
-  inset: -3px;
+  inset:-2px;
 
-  border-radius: 50%;
+  border-radius:50%;
 
-  border-top: 3px solid #00d4ff;
-  border-right: 3px solid #7b2cff;
+  border-top:2px solid #00d4ff;
+  border-right:2px solid #7b2cff;
 
-  animation: rotateRing 3s linear infinite;
+  animation:rotateRing 4s linear infinite;
 }
 
-.scanner-inner {
-  width: 130px;
-  height: 130px;
+.scanner-inner{
+  width:122px;
+  height:122px;
 
-  border-radius: 50%;
+  border-radius:50%;
 
-  background: rgba(255, 255, 255, 0.05);
+  background:rgba(255,255,255,0.04);
 
-  backdrop-filter: blur(14px);
+  backdrop-filter:blur(10px);
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border:1px solid rgba(255,255,255,0.07);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 
-  font-size: 30px;
-  font-weight: 700;
+  font-size:28px;
+  font-weight:700;
 
-  color: white;
-
-  box-shadow:
-    inset 0 0 18px rgba(255, 255, 255, 0.04),
-    0 0 20px rgba(0, 212, 255, 0.08);
+  color:white;
 }
 
-.boot-text {
-  margin-top: 34px;
+.boot-text{
+  margin-top:32px;
 
-  font-size: 15px;
+  font-size:14px;
 
-  letter-spacing: 2px;
+  letter-spacing:2px;
 
-  color: #d4d4d4;
+  color:#d4d4d4;
 
-  text-transform: uppercase;
+  text-transform:uppercase;
 
-  animation: fade 0.5s ease;
+  animation:fade 0.5s ease;
 }
 
-@keyframes rotateRing {
-  to {
-    transform: rotate(360deg);
+@keyframes rotateRing{
+  to{
+    transform:rotate(360deg);
   }
 }
 
-@keyframes fade {
+@keyframes fade{
 
-  from {
-    opacity: 0;
-    transform: translateY(10px);
+  from{
+    opacity:0;
+    transform:translateY(8px);
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  to{
+    opacity:1;
+    transform:translateY(0);
   }
 }
 
@@ -276,239 +269,212 @@ body {
    REVEAL SCREEN
 ========================= */
 
-.reveal-screen {
-  position: relative;
+.reveal-screen{
+  position:relative;
 
-  width: 100%;
-  height: 100vh;
+  width:100%;
+  height:100vh;
 
-  overflow: hidden;
+  overflow:hidden;
 
-  padding: 20px;
-
-  background:
-    radial-gradient(circle at top, #111 0%, #000 70%);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.reveal-glow {
-  position: absolute;
-
-  width: 320px;
-  height: 320px;
-
-  filter: blur(140px);
-
-  opacity: 0.30;
-}
-
-.purple {
-  background: #7b2cff;
-
-  top: 10%;
-  left: -10%;
-}
-
-.cyan {
-  background: #00d4ff;
-
-  bottom: 10%;
-  right: -10%;
-}
-
-.reveal-card {
-  position: relative;
-  z-index: 2;
-
-  width: 100%;
-  max-width: 420px;
-
-  padding: 42px 30px;
-
-  border-radius: 34px;
-
-  overflow: hidden;
-
-  text-align: center;
+  padding:20px;
 
   background:
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.10),
-      rgba(255, 255, 255, 0.03)
-    );
+  radial-gradient(circle at top,#101010 0%,#000 70%);
 
-  backdrop-filter: blur(24px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 
-  border: 1px solid rgba(255, 255, 255, 0.10);
+.reveal-glow{
+  position:absolute;
+
+  width:220px;
+  height:220px;
+
+  filter:blur(70px);
+
+  opacity:0.20;
+}
+
+.purple{
+  background:#7b2cff;
+
+  top:10%;
+  left:-10%;
+}
+
+.cyan{
+  background:#00d4ff;
+
+  bottom:10%;
+  right:-10%;
+}
+
+.reveal-card{
+  position:relative;
+  z-index:2;
+
+  width:100%;
+  max-width:390px;
+
+  padding:38px 28px;
+
+  border-radius:30px;
+
+  overflow:hidden;
+
+  text-align:center;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.02)
+  );
+
+  backdrop-filter:blur(10px);
+
+  border:1px solid rgba(255,255,255,0.08);
 
   animation:
-    cardFade 1.4s cubic-bezier(0.22, 1, 0.36, 1),
-    floatCard 5s ease-in-out infinite 1.4s;
+  cardFade 1.2s cubic-bezier(0.22,1,0.36,1),
+  floatCard 5s ease-in-out infinite 1.2s;
 
   box-shadow:
-    0 0 30px rgba(123, 44, 255, 0.18),
-    0 0 80px rgba(0, 212, 255, 0.08),
-    inset 0 0 20px rgba(255, 255, 255, 0.03);
+  0 0 20px rgba(123,44,255,0.12),
+  0 0 45px rgba(0,212,255,0.05);
 }
 
-.reveal-card::before {
-  content: "";
+.reveal-card::before{
+  content:"";
 
-  position: absolute;
+  position:absolute;
 
-  top: 0;
-  left: -60%;
+  top:0;
+  left:-70%;
 
-  width: 220px;
-  height: 100%;
+  width:180px;
+  height:100%;
 
-  background: linear-gradient(
+  background:linear-gradient(
     90deg,
     transparent,
-    rgba(255,255,255,0.10),
+    rgba(255,255,255,0.08),
     transparent
   );
 
-  transform: skewX(-20deg);
+  transform:skewX(-20deg);
 
-  animation: shine 5s infinite;
+  animation:shine 6s infinite;
 }
 
-.small-text {
-  font-size: 11px;
+.small-text{
+  font-size:10px;
 
-  letter-spacing: 3px;
+  letter-spacing:3px;
 
-  color: #bdbdbd;
+  color:#bdbdbd;
 
-  margin-bottom: 20px;
+  margin-bottom:18px;
 }
 
-.thank-title {
-  font-size: 46px;
+.thank-title{
+  font-size:42px;
 
-  font-weight: 800;
+  font-weight:800;
 
-  margin-bottom: 22px;
+  margin-bottom:20px;
 
-  letter-spacing: 1px;
+  letter-spacing:1px;
 
-  background: linear-gradient(
+  background:
+  linear-gradient(
     90deg,
     #ffffff,
     #00d4ff
   );
 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  animation: glowPulse 3s ease-in-out infinite;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-.message {
-  font-size: 15px;
+.message{
+  font-size:15px;
 
-  line-height: 1.9;
+  line-height:1.8;
 
-  color: #ececec;
+  color:#ececec;
 
-  margin-bottom: 30px;
+  margin-bottom:28px;
 
-  font-weight: 300;
+  font-weight:300;
 }
 
-.line {
-  width: 100%;
-  height: 1px;
+.line{
+  width:100%;
+  height:1px;
 
-  background: rgba(255, 255, 255, 0.08);
+  background:rgba(255,255,255,0.08);
 
-  margin-bottom: 20px;
+  margin-bottom:18px;
 }
 
-.footer-text {
-  font-size: 13px;
+.footer-text{
+  font-size:12px;
 
-  color: #9c9c9c;
+  color:#9c9c9c;
 
-  letter-spacing: 1px;
+  letter-spacing:1px;
 }
 
-@keyframes glowPulse {
+@keyframes shine{
 
-  0% {
-    filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.2));
+  0%{
+    left:-70%;
   }
 
-  50% {
-    filter: drop-shadow(0 0 18px rgba(0, 212, 255, 0.6));
-  }
-
-  100% {
-    filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.2));
+  100%{
+    left:140%;
   }
 }
 
-@keyframes shine {
+@keyframes cardFade{
 
-  0% {
-    left: -60%;
-  }
-
-  100% {
-    left: 140%;
-  }
-}
-
-@keyframes cardFade {
-
-  0% {
-    opacity: 0;
+  0%{
+    opacity:0;
 
     transform:
-      translateY(40px)
-      scale(0.94);
+    translateY(35px)
+    scale(0.96);
 
-    filter: blur(12px);
+    filter:blur(10px);
   }
 
-  60% {
-    opacity: 1;
+  100%{
+    opacity:1;
 
     transform:
-      translateY(-4px)
-      scale(1.01);
+    translateY(0px)
+    scale(1);
 
-    filter: blur(0px);
-  }
-
-  100% {
-    opacity: 1;
-
-    transform:
-      translateY(0px)
-      scale(1);
-
-    filter: blur(0px);
+    filter:blur(0px);
   }
 }
 
-@keyframes floatCard {
+@keyframes floatCard{
 
-  0% {
-    transform: translateY(0px);
+  0%{
+    transform:translateY(0px);
   }
 
-  50% {
-    transform: translateY(-8px);
+  50%{
+    transform:translateY(-5px);
   }
 
-  100% {
-    transform: translateY(0px);
+  100%{
+    transform:translateY(0px);
   }
 }
 
@@ -516,85 +482,95 @@ body {
    PARTICLES
 ========================= */
 
-#tsparticles {
-  position: absolute !important;
+#tsparticles{
+  position:absolute !important;
 
-  inset: 0;
+  inset:0;
 
-  width: 100%;
-  height: 100%;
+  width:100%;
+  height:100%;
 
-  z-index: 0;
+  z-index:0;
 }
 
 /* =========================
    MOBILE
 ========================= */
 
-@media (max-width: 480px) {
+@media (max-width:480px){
 
-  .title {
-    font-size: 34px;
+  .title{
+    font-size:34px;
 
-    letter-spacing: 2px;
+    letter-spacing:2px;
   }
 
-  .subtitle {
-    font-size: 12px;
+  .subtitle{
+    font-size:11px;
 
-    letter-spacing: 1.5px;
+    letter-spacing:1.5px;
   }
 
-  .enter-btn {
-    width: 100%;
-    max-width: 260px;
+  .enter-btn{
+    width:100%;
+    max-width:250px;
 
-    font-size: 14px;
+    font-size:14px;
   }
 
-  .scanner-ring {
-    width: 150px;
-    height: 150px;
+  .scanner-ring{
+    width:145px;
+    height:145px;
   }
 
-  .scanner-inner {
-    width: 115px;
-    height: 115px;
+  .scanner-inner{
+    width:108px;
+    height:108px;
 
-    font-size: 24px;
+    font-size:22px;
   }
 
-  .boot-text {
-    font-size: 13px;
+  .boot-text{
+    font-size:12px;
 
-    text-align: center;
+    text-align:center;
 
-    padding: 0 20px;
+    padding:0 20px;
   }
 
-  .reveal-card {
-    padding: 34px 24px;
+  .reveal-card{
+    max-width:340px;
 
-    border-radius: 28px;
+    padding:30px 22px;
+
+    border-radius:26px;
   }
 
-  .thank-title {
-    font-size: 36px;
+  .thank-title{
+    font-size:34px;
   }
 
-  .message {
-    font-size: 14px;
+  .message{
+    font-size:14px;
 
-    line-height: 1.8;
+    line-height:1.7;
   }
 
-  .small-text {
-    font-size: 10px;
+  .small-text{
+    font-size:9px;
 
-    letter-spacing: 2px;
+    letter-spacing:2px;
   }
 
-  .footer-text {
-    font-size: 12px;
+  .footer-text{
+    font-size:11px;
+  }
+
+  .overlay{
+    filter:blur(80px);
+  }
+
+  .reveal-glow{
+    filter:blur(50px);
   }
 }
