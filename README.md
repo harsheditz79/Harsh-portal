@@ -35,7 +35,7 @@ Instead of sending a normal “thank you” message, this project creates a cine
 Clone the repository:
 
 ```bash
-git clone https://github.com/harsheditz79/Harsh-portal.git
+git clone https://github.com/harshal-patil-dev/Harsh-portal.git
 
 Go inside the project folder:
 cd Harsh-portal
