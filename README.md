@@ -8,7 +8,7 @@ Instead of sending a traditional “Thank You” message, this project creates a
 
 ## 🚀 Live Demo
 
-🔗 https://harsh-portal.vercel.app
+🔗 https://harsh-portal.vercel.app/
 
 ---
 
